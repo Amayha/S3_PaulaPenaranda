@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">S3_PaulaPenaranda</string>
+    <string name="app_name">TallerS3</string>
+    <string name="hint_masa">Masa</string>
+    <string name="hint_altura">Altura</string>
+    <string name="txt_info">Introduce los datos para calcular tu IMC</string>
+    <string name="txt_tuimc">Tu IMC es</string>
+
+
 </resources>

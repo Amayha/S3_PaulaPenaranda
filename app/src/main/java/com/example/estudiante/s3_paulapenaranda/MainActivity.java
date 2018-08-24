@@ -10,23 +10,45 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tv_titulo;
-    EditText et_nombre;
-    Button btn_calcular;
 
+    EditText et_masa;
+    EditText et_altura;
+    Button btn_calcular;
+    TextView lbl_resultado;
+    double masa;
+    double altura;
+    double resultado;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inicial);
 
-        tv_titulo = findViewById(R.id.tv_titulo);
-        et_nombre = findViewById(R.id.et_nombre);
+
+        lbl_resultado = findViewById(R.id.lbl_resultado);
         btn_calcular = findViewById(R.id.btn_calcular);
-
+        et_altura = findViewById(R.id.et_altura);
+        et_masa = findViewById(R.id.et_masa);
 
         btn_calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                masa = Double.parseDouble(et_masa.getText().toString());
+                altura = Double.parseDouble(et_altura.getText().toString());
+                resultado = (masa/Math.pow(altura,2));
+                lbl_resultado.setText(Double.toString(resultado));
+
+
+            }
+        });
+
+        /*tv_titulo = findViewById(R.id.tv_titulo);
+        et_nombre = findViewById(R.id.et_nombre);
+        btn_calcular = findViewById(R.id.btn_calcular);*/
+
+
+       /* btn_calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String nombre = et_nombre.getText().toString();
@@ -38,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 // toast es un mensajito que aparece unos segundos
                 
             }
-        });
+        });*/
+
+
 
 
     }
