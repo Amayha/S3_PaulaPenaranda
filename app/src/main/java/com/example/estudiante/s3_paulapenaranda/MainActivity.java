@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 masa = Double.parseDouble(et_masa.getText().toString());
                 altura = Double.parseDouble(et_altura.getText().toString());
                 resultado = (masa/Math.pow(altura,2));
-                lbl_resultado.setText(Double.toString(resultado));
+                lbl_resultado.setText(String.format("%.3f",resultado ) );
 
 
             }
